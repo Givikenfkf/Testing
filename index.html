@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MetaDataEdit - Web Port</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MetaDataEdit — Web Port</h1>
+
+    <section id="upload-section">
+      <label class="file-row">
+        <span>Select file</span>
+        <input type="file" id="file-input">
+      </label>
+      <button id="read-btn">Read metadata</button>
+    </section>
+
+    <section id="meta-section" class="hidden">
+      <h2>Metadata for: <span id="file-name"></span></h2>
+      <div id="metadata-list"></div>
+
+      <h3>Edit metadata</h3>
+      <div id="edit-pairs"></div>
+      <button id="add-pair">Add key/value</button>
+      <button id="save-btn">Save</button>
+      <a id="download-link" class="hidden">Download modified file</a>
+    </section>
+
+    <section id="exe-hints" class="hidden">
+      <h3>EXE quick fields</h3>
+      <label>CompanyName <input id="exe-CompanyName"></label>
+      <label>FileDescription <input id="exe-FileDescription"></label>
+      <label>FileVersion <input id="exe-FileVersion"></label>
+      <label>ProductName <input id="exe-ProductName"></label>
+      <label>ProductVersion <input id="exe-ProductVersion"></label>
+      <button id="apply-exe">Apply</button>
+    </section>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
